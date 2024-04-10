@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-from flask import Flask
-
 "With Flask web application, display route for 'Hello HBNB'"
 "Other route for display 'HBNB'"
 "Other route for display 'C + text', then other route for 'python + text'"
 
+from flask import Flask
 
 app = Flask(__name__)
 
@@ -34,3 +33,4 @@ def python(text):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+
