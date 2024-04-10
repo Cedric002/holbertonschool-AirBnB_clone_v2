@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"With Flask web application, display route for 'Hello HBNB' then other route for 'HBNB'"
+"Other route for display 'C + text', then other route for 'python + text'"
+
 from flask import Flask
 
 app = Flask(__name__)

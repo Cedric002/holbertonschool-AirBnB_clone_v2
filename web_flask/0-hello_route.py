@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"With Flask web application, display route for 'Hello HBNB'"
+
 from flask import Flask
 
 app = Flask(__name__)

@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"With Flask web application, display route for 'Hello HBNB' then other route for 'HBNB'"
+"Other route for display 'C + text', then other route for 'python + text'"
+"Other route for determines whether the written text is a number"
+"Other route for display in h1 of html page a number based on what the user writes in URL"
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
