@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-from flask import Flask
-
 "With Flask web application, display route for 'Hello HBNB'"
 "Other route for display 'HBNB'"
-
+from flask import Flask
 
 app = Flask(__name__)
 
