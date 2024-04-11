@@ -7,10 +7,20 @@ from models import storage
 app = Flask(__name__)
 app.url_map.strict_slashes = False
 
-@app.route('/cities_by_states')
-def cities_by_states():
+
+@app.route('/states')
+def states():
     states = sorted(storage.all("State").values(), key=lambda state: state.name)
-    return render_template('7-states_list.html', states=states)
+    return render_template('9-states.html', states=states)
+
+
+@app.route('/states/<id>')
+def state(id):
+    state = storage.get("State", id)
+    if state is None:
+        return render_template('404.html'), 404
+    return render_template('9-state.html', state=state)
+
 
 @app.teardown_appcontext
 def teardown_db(exception):
