@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<HTML lang="en">
+    <HEAD>
+        <TITLE>HBNB</TITLE>
+    </HEAD>
+    <BODY>
+        <H1>States</H1>
+        <UL>
+            {% for state in states %}
+            <LI>{{ state.id }}: <B>{{ state.name }}</B></LI>
+            {% endfor %}
+        </UL>
+    </BODY>
+</HTML>
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>State</title>
+</head>
+<body>
+    {% if state %}
+    <h1>State: {{ state.name }}</h1>
+    <h3>Cities:</h3>
+    <ul>
+        {% for city in state.cities %}
+        <li>{{ city.id }}: <b>{{ city.name }}</b></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h1>Not found!</h1>
+    {% endif %}
+</body>
+</html>
+-->
