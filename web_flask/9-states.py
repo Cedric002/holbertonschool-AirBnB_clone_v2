@@ -16,7 +16,7 @@ def states():
 
 @app.route('/states/<id>')
 def state(id):
-    state = storage.get("State", id)
+    state = storage.all("State", id)
     if state is None:
         return render_template('404.html'), 404
     return render_template('9-state.html', state=state)
