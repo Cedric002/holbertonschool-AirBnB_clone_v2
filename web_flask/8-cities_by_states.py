@@ -16,7 +16,7 @@ def cities_by_states():
 
 
 @app.teardown_appcontext
-def remove_session(exception=None):
+def teardown_db(exception):
     storage.close()
 
 
