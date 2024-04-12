@@ -3,20 +3,20 @@
 
 from flask import Flask, render_template
 from models import storage
+from models.state import State
 
 app = Flask(__name__)
-app.url_map.strict_slashes = False
 
 
-@app.route('/states')
+@app.route('/states', strict_slashes = False)
 def states():
-    states = storage.all("State")
+    states = storage.all(State)
     return render_template("9-states.html", state=states)
 
 
-@app.route('/states/<id>')
-def state_id(id):
-    for state in storage.all("State").values():
+@app.route('/states/<id>', strict_slashes = False)
+def state(id):
+    for state in storage.all(State).values():
         if state == id:
             return render_template("9-states.html", state=state)
     return render_template("9-states.html")
