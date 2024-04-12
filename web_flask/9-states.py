@@ -16,7 +16,6 @@ def states():
 
 @app.route('/states/<id>')
 def state_id(id):
-    state = storage.all("State", id)
     for state in storage.all("State").values():
         if state == id:
             return render_template("9-states.html", state=state)
