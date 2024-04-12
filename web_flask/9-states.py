@@ -17,9 +17,10 @@ def states():
 @app.route('/states/<id>')
 def state(id):
     state = storage.all("State", id)
-    if state is None:
-        return render_template('404.html'), 404
-    return render_template('9-state.html', state=state)
+    if state:
+        return render_template('9-state.html', state=state)
+    else:
+        return render_template('9-state.html', state=None)
 
 
 @app.teardown_appcontext
