@@ -11,6 +11,7 @@ app = Flask(__name__)
 
 @app.route('/hbnb_filters', strict_slashes=False)
 def display_html():
+    "display State, Amenity and City"
     states = storage.all(State).values()
     amenities = storage.all(Amenity).values()
     return render_template(
