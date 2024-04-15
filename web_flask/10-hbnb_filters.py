@@ -3,6 +3,7 @@
 
 from flask import Flask, render_template
 from models import storage
+from models.city import City
 from models.state import State
 from models.amenity import Amenity
 
@@ -14,8 +15,9 @@ def display_html():
     "display State, Amenity and City"
     states = storage.all(State).values()
     amenities = storage.all(Amenity).values()
+    cities = storage.all(City).values()
     return render_template(
-        "10-hbnb_filters.html", states=states, amenities=amenities)
+        "10-hbnb_filters.html", states=states, amenities=amenities, cities=cities)
 
 
 @app.teardown_appcontext
